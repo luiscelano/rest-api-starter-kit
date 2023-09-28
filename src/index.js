@@ -22,8 +22,9 @@ import routes from 'routes'
   const server = http.createServer(app)
 
   app.use(cors())
-  app.use(bodyParser.urlencoded({ extended: false }))
-  app.use(bodyParser.json())
+  // app.use(bodyParser.urlencoded({ extended: false }))
+  // app.use(bodyParser.json())
+  app.use(express.json())
   app.use(routes)
   //   initAPI(app)
   app.get('/healthcheck', (__, res) => {
