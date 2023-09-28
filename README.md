@@ -47,9 +47,12 @@ npm run start
 ## Uso de Git
 
 Para usar git, se debe crear una rama especifica para los cambios, y luego se hace un [Pull Request](https://docs.github.com/articles/about-pull-requests) a la rama `main`
+![image](https://github.com/luiscelano/rest-api-starter-kit/assets/57637647/032d3e7f-4063-449c-8c04-18e39854d94e)
 
 ## Cómo funciona una REST API
+![image](https://github.com/luiscelano/rest-api-starter-kit/assets/57637647/9662566d-0882-434b-a6fe-14ff7c684221)
 
 ## Autenticación
 
 Cada consulta al servidor, requerirá de una llave por la cual sabrémos que usuario está realizando una petición. Cada sesión se almacenará en una base de datos en Redis y las contraseñas se almacenarán en la base de datos de forma encriptada agregando el método Salt.
+![image](https://github.com/luiscelano/rest-api-starter-kit/assets/57637647/10188015-608f-414d-9f66-1d0924dc4ab3)
