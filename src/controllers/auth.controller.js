@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { users } from './users.controller'
 import generateAccessToken from '../utils/generateAccessToken'
-import generateRefreshToken from '../utils/generateRefreshToken'
+import generateRefreshToken from 'utils/generateRefreshToken'
 
 export const refreshTokens = [] // will be stored in Redis DB
 

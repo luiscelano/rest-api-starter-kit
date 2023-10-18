@@ -1,13 +1,9 @@
 import express from 'express'
-import bodyParser from 'body-parser'
 import http from 'http'
-import path from 'path'
-// import { initAPI } from 'api'
 import dotenv from 'dotenv'
 import cors from 'cors'
 
-dotenv.config({ path: __dirname.replace('src', `.env.${process.env.NODE_ENV}`) })
-import config from 'config'
+dotenv.config({ path: __dirname.replace('src', `.env.${process.env.NODE_ENV}` || '.env.development') })
 import posts from '__fixtures__/posts.json'
 import routes from 'routes'
 ;(async () => {
@@ -16,14 +12,9 @@ import routes from 'routes'
   const HOST = 'localhost'
   const PORT = process.env.PORT || 3000
 
-  global.config = await config()
-  console.log('>>> global.config:', global.config)
-
   const server = http.createServer(app)
 
   app.use(cors())
-  // app.use(bodyParser.urlencoded({ extended: false }))
-  // app.use(bodyParser.json())
   app.use(express.json())
   app.use(routes)
   //   initAPI(app)
